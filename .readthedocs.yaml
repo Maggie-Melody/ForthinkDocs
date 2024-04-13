@@ -1,0 +1,15 @@
+version: 1
+
+build:
+  image: latest
+  tools:
+    python: "3.11"
+  
+sphinx:
+  builder: html
+  configuration: source/conf.py
+  fail_on_warning: false
+
+python:
+  install:
+  - requirements: requirements.txt
