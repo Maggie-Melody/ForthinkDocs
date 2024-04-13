@@ -10,6 +10,22 @@ Welcome to forthink production documentation!
    :maxdepth: 2
    :caption: Contents:
 
+.. toctree::
+   :maxdepth: 2
+   :caption: MODULES
+
+   modules/DK_M01
+   modules/UWB_Dongle
+
+.. toctree::
+   :maxdepth: 3
+   :caption: UWB Beginner Guide
+
+   books/part1/about_uwb
+   books/part1/about_ccc
+   books/part1/about_IEEE_15_4
+   books/part1/about_IEEE_phy
+   books/part1/uwb_baseband
 
 
 Indices and tables
