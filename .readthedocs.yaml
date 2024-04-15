@@ -1,8 +1,7 @@
 version: 2
 
 build:
-  os: ubuntu-22.04
-  image: latest
+  os: windows
   tools:
     python: "3.11"
   

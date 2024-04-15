@@ -1,5 +1,5 @@
-# 1.关于UWB
-## 1.1UWB技术的发展历史
+# 1. 关于UWB
+## 1.1 UWB技术的发展历史
 &emsp;&emsp;超宽带技术（Ultra Wideband，简称UWB），是一种无线通信技术，与传统的窄带通信技术相比，UWB技术的带宽非常宽，相应数据传输速率高，且具有良好的抗干扰和穿透能力。<br />
 &emsp;&emsp;UWB技术最初是由美国国防部研究局（DARPA）于20世纪60年代开发，主要用于雷达系统和军事通信领域。UWB技术的特点是信号带宽极宽，信号的时域和频域特性非常复杂，可以通过这种信号实现高分辨率的目标探测和跟踪。<br />
 &emsp;&emsp;在1990年代，UWB技术开始进入商用领域，主要用于雷达成像、无线通信和测距等应用。
@@ -44,8 +44,10 @@ FCC中规定，UWB系统必须在一定功率水平以下传输，以免对同�
 
 在成像系统应用中，可以分为探地雷达 (GPR)、墙壁成像、医学成像、穿墙成像和监视系统。表 2.1 总结了这些系统的 FCC 发射限制。
 FCC 要求必须协调各种成像系统（GPR、成像和医疗）的操作，并且必须报告操作的日期和位置。此外，使用表 2.1 中所述的成像系统需要许可，每个系统的使用仅限于某些组织。例如，监视系统只能由公共安全、制造、石油和电力许可证持有者操作。尽管 FCC 的发射限制因各种类型的 UWB 系统而异，但还有许多其他 FCC 法规对所有 UWB 系统都是通用的。
- - 发射最高功率的频率$f_M$必须在−10 dB 绝对信号带宽内。
- - $f_M$附近50 MHz 带宽内的峰值发射不得超过0 dBm EIRP。
+
+
+ - 发射最高功率的频率 $f_M$ 必须在−10 dB 绝对信号带宽内。
+ - $f_M$ 附近50 MHz 带宽内的峰值发射不得超过0 dBm EIRP。
  - 0.96 GHz 以下的发射受FCC的−41.3 dBm/MHz 限制。
  - 不允许在飞机、轮船或卫星上操作。
 
@@ -80,22 +82,57 @@ UWB和BLE具有许多共同的特点：低功耗、低成本、用于资产跟�
 而BLE定位技术通常则使用RSSI来实现定位（对于最新的BLE 5.1标准中也增加了蓝牙AoA等方案，精度有所提高），此种方法在距离较远的情况下，估计精度不高。另外，BLE的覆盖范围以及数据速率均比UWB低，且更容易受到信号干扰。
 但是蓝牙作为一个相对更加成熟的技术，已经形成非常成熟的生态环境，覆盖的应用场景非常广，因此在一段时间内都将是一个非常重要的技术基础。以最新的CCC的数字钥匙3.0方案来说，通常情况下，也会使用BLE作为OOB的主要方式。
 
-### UWB与WiFi
+### 1.3.2 UWB与WiFi
 
 WiFi目前在室内空间作为室内短距离无线通信的重要手段而被广泛使用，已然成为室内的一项关键技术，同样，在室内定位方面来说，也是非常关键的射频技术。当然，从定位精度的角度来说，WiFi的精度低于UWB，更多的依然使用RSSI的方式来估计距离，与蓝牙相似。同样，WiFi也更容易受到信号干扰，而UWB对信号干扰，以及多径干扰等有着天然的优势。
 但WiFi作为广泛使用的室内数据通信接入点（AP），对于不需要高精度的场景而言，其有着天然的覆盖优势。
 从目前的一些应用来说，通过不断的收集固定场景中可能存在的WiFi设备的RSSI信号强度，形成对应场景下的空间指纹谱，对于用户而言，只需要根据收集的WiFi设备的情况与空间指纹谱进行对比，即可实现室内的较为精确的定位。
 
 
-||UWB|蓝牙5.1 AoA|WiFi定位|ZigBee定位|
-|---|---|---|---|---|
-|**定位原理**|ToF/TDOA|AOA测量|RSSI|RSSI/相位差|
-|**定位精度/米**|0.1-0.3|0.3-0.5|3-5|3-10|
-|**优势**|传输速率高、发射功率较低、定位精度高|设备体积小、设备终端多、定位精度较高|便于扩展、成本低|低功耗、低成本|
-|**劣势**|功耗大、成本高、覆盖范围小|稳定性较差、受噪声信号干扰大|定位精度低|容易受环境干扰|
+| 维度  |     UWB     | 蓝牙5.1 AoA | WiFi定位 | ZigBee定位 |
+|------|:----------:|:----------:|:--------:|:---------:|
+| 定位原理 |   ToF/TDOA   |  AOA测量   |   RSSI   | RSSI/相位差 |
+| 定位精度/米 |   0.1-0.3   |  0.3-0.5   |   3-5    |    3-10   |
+| 优势   | 传输速率高、发射功率较低、定位精度高 | 设备体积小、设备终端多、定位精度较高 | 便于扩展、成本低 | 低功耗、低成本 |
+| 劣势   | 功耗大、成本高、覆盖范围小 | 稳定性较差、受噪声信号干扰大 | 定位精度低 | 容易受环境干扰 |
 
+
+## 1.4 UWB发展历史
+
+> 本节简要介绍UWB的发展历史，从其应用形成、相关标准的发展等进行简单的介绍。
+
+UWB的通信方式分为脉冲无线电（impulse radio, IR）和载波调制方式。脉冲无线电是传统的UWB实现方式，载波调制方式是FCC规定了UWB通信的频谱范围和功率限制之后提出的，其中调制载波方式又可以分为单载波的直接序列扩频超宽带（Direct sequence UWB, DS-UWB）和多载波正交频分多路复用（Multi-Band OFDM Alliance, MBOA）体制。
+
+从2002年开始IEEE开始制定802.15.3a标准，出现了两大技术阵营，基于多频带正交频分复用技术的超宽带方案（MB-OFDM-UWB）和基于脉冲无线电技术的直接序列超宽带方案DS-UWB。两种方案区别很大，无法相互兼容，因此在802.15.3a无法统一两种方案，在2006年，工作组解散。
+
+主导MB-OFDM-UWB的WiMedia联盟在2007年3月将基于该方案的标准提交到ISO，并得到认证，成为超宽带技术的第一个国际标准。
+
+IEEE 802.15.4a工作组于2004年3月成立，该方案采用两种可选择的物理层，由超宽带脉冲无线电（Impulse Radio UWB, IR-UWB）和Chirp扩频（Chirp Spread Spectrum, CSS）组成，最终在2007年3月，IEEE802.15.4a被IEEE-SA标准委员会批准为IEEE 802.15.4-2006，在2011年和2015年该标准又得到补充修订，分别命名为IEEE 802.15.4-2011和IEEE 802.15.4-2015。
+
+
+### 1.4.1 国外技术发展趋势
+&emsp;&emsp;Timedomain、Decawave，相继已经被4D robots、Qorvo收购。
+另外，还有Zebra等企业，涉及到IEEE 802.15.4f协议。
+
+### 1.4.2 国内发展趋势
+此外，在中国国内也有相关的企业开始进行UWB芯片的国产化研究，如纽瑞芯、优智联等等企业。
 
 
 ## 参考文献
 
-1. Ultra-Wideband Positioning Systems.
+[1] Arslan Huseyin, Chen Zhi Ning, Benedetto Maria-Gabriella Di. Ultra Wideband Wireless Communication.
+
+[2] Ross G F. The Transient Analysis of Certain TEM Mode Four-Port Networks.
+
+[3] Barrett T W. History of Ultra WideBand (UWB) Radar & Communications: Pioneers and Innovators.
+
+[4] Ghavami M, Michael L B, Kohno R. Ultra Wideband Signals and Systems in Communication Engineering.
+
+[5] US 47 CFR Part15 Ultra-Wideband Operations FCC Report and Order. Available: http://www.fcc.gov/Bureaus/Engineering_Technology/Orders/2002/fcc02048.pdf
+
+[6] 刘琪，闫丽，周正. UWB的技术特点及其发展方向。
+
+[7] IEEE Standard for Low-Rate Wireless Networks, IEEE Std 802.15.4-2015.
+
+[8] Ultra-Wideband Positioning Systems.
+

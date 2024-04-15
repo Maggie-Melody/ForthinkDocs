@@ -7,19 +7,19 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Forthink Product Documentation'
-copyright = '2019 - 2024, chengdu forthink tech. Co., Ltd'
+copyright = '2019 - 2024, Chengdu forthink tech. Co., Ltd'
 author = 'luochao'
 release = '0.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["sphinx_rtd_theme", "recommonmark"]
+extensions = ["sphinx_rtd_theme", "recommonmark", "sphinxcontrib.mermaid", "sphinx.ext.mathjax", "sphinx_markdown_tables"]
 
 templates_path = ['_templates']
 exclude_patterns = []
 
-
+mathjax_path = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
@@ -38,7 +38,6 @@ source_parsers = {
 }
 source_suffix = ['.rst', '.md']
 
-
 # Autostructify
 from recommonmark.transform import AutoStructify
 def setup(app):
@@ -48,3 +47,4 @@ def setup(app):
             'auto_toc_tree_section': 'Contents',
             }, True)
     app.add_transform(AutoStructify)
+
