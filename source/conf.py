@@ -38,6 +38,14 @@ source_parsers = {
 }
 source_suffix = ['.rst', '.md']
 
+# 源文件所在的目录，通常是包含.rst文件的目录  
+# 确保这个路径指向的文件夹位于与你的输出目录相同的驱动器上  
+# source_dir = 'E:/预研/车钥匙/产品设计/软件设计/user docs/ForthinkDocs/source/Datasheet.rst' 
+
+# 构建目录，即输出HTML等文件的目录  
+# 确保这个路径也位于与你的源文件相同的驱动器上  
+# build_dir = 'E:/path/to/your/build/directory'  
+
 # Autostructify
 from recommonmark.transform import AutoStructify
 def setup(app):
