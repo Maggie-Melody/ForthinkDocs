@@ -44,7 +44,7 @@ source_suffix = ['.rst', '.md']
 
 # 构建目录，即输出HTML等文件的目录  
 # 确保这个路径也位于与你的源文件相同的驱动器上  
-# build_dir = 'E:/path/to/your/build/directory'  
+# build_dir = 'E:/预研/车钥匙/产品设计/软件设计/user docs/ForthinkDocs/build/directory'  
 
 # Autostructify
 from recommonmark.transform import AutoStructify

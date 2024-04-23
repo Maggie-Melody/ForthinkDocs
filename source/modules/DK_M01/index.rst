@@ -1,24 +1,28 @@
-====
 DK-M01 UWB收发模块
-====
+==================
 
 感谢您选择了DK-M01 UWB收发模块，以下是帮助您使用本产品的文档。
 
 .. toctree::
     :maxdepth: 2
 
-    快速入门指南<Quick_Start>
-    数据手册<Datasheet>
+    Quick_Start.rst
+    Datasheet.rst
 
 产品概述
-====
+========
 
 DK-M01（EH100607M02-M1）是一款基于NXP的NCJ29D5的小型UWB收发模块，模块对外提供串口通信接口、6线SPI接口和2个GPIO，可以通过半孔形式贴装于用户PCB上，尺寸为20*30*1mm。
 UWB PHY符合IEEE 802.15.4™-2015标准并向下兼容，嵌入式PHY和MAC兼容FiRa/CCC联盟规范，可以用于无线通信与测距、TOF定位等。
 
 产品特性
-====
-.. image::  ../images/DK_M01_Appearance.png
+========
+
+.. figure:: images/DK_M01_Appearance.png
+    :alt: DK-M01外观
+    :figwidth: 400px
+    :figclass: align-center
+
 
 * 可用于智慧工业、智慧物流、智能家居等IoT应用场景
 * 尺寸精巧：20mm*30mm*1mm
