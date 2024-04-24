@@ -11,11 +11,11 @@ Welcome to forthink production documentation!
    :caption: Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: MODULES
 
-   modules/DK_M01
-   modules/UWB_Dongle
+   modules/DK_M01/index
+   modules/UWB_Dongle/index
 
 .. toctree::
    :maxdepth: 3
